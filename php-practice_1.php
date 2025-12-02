@@ -5,8 +5,11 @@ $name = "高沢莉菜";
 echo "私の名前は" . $name . "です。";
 
 // Q2 四則演算
+$num = 5 * 4;
 
+echo $num . "\n";
 
+echo $num / 2;
 // Q3 日付操作
 
 
