@@ -88,17 +88,101 @@ foreach ($kanto as $pref => $capital) {
 
 // Q9 連想配列-3
 
+$kanto = [
+    "東京都"   => "新宿区",
+    "神奈川県" => "横浜市",
+    "千葉県"   => "千葉市",
+    "埼玉県"   => "さいたま市",
+    "栃木県"   => "宇都宮市",
+    "群馬県"   => "前橋市",
+    "茨城県"   => "水戸市",
+    
+    "愛知県"   => "名古屋市",
+    "大阪府"   => "大阪市"
+    
+];
+
+foreach ($kanto as $pref => $capital) {
+
+
+    if (
+        $pref === "東京都" ||
+        $pref === "神奈川県" ||
+        $pref === "千葉県" ||
+        $pref === "埼玉県" ||
+        $pref === "栃木県" ||
+        $pref === "群馬県" ||
+        $pref === "茨城県"
+    ) {
+        
+        echo $pref . "の県庁所在地は、" . $capital . "です。\n";
+    } else {
+
+        echo $pref . "は関東地方ではありません。\n";
+    }
+}
 
 // Q10 関数-1
+function hello($name)
+{
+    return $name . "さん、こんにちは。";
+}
+
+
+echo hello('金谷')."\n";
+echo hello('安藤')."\n";
 
 
 // Q11 関数-2
 
+function calcTaxInPrice($price) {
+    return $price * 1.1;
+}
+
+$price = 1000;
+
+$taxInPrice = calcTaxInPrice($price);
+
+echo $price . "円の商品の税込価格は" . $taxInPrice . "円です。";
+
+
 
 // Q12 関数とif文
+
+unction distinguishNum($num) {
+    if ($num % 2 === 0) {
+        return $num . "は偶数です。";
+    } else {
+        return $num . "は奇数です。";
+    }
+}
+
+echo distinguishNum(11) . "\n";
+echo distinguishNum(24) . "\n";
+
+
 
 
 // Q13 関数とswitch文
 
+function evaluateGrade($i) {
+    switch ($i) {
+        case "A":
+        case "B":
+            return "合格です。";
+
+        case "C":
+            return "合格ですが追加課題があります。";
+
+        case "D":
+            return "不合格です。";
+
+        default:
+            return "判定不明です。講師に問い合わせてください。";
+    }
+}
+
+echo evaluateGrade("A") . "\n";
+echo evaluateGrade("Z") . "\n";
 
 ?>
